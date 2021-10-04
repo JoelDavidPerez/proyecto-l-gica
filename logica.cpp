@@ -9,9 +9,9 @@ using namespace std;
 int determinarPica(int numeroIngresado, int posicion, int numero[])
 {
 	int devuelve = 0;
-	for(int i=0;i<4;i++)
+	for(int i=1;i<5;i++)
 	{
-		if(numeroIngresado==numero[i] && posicion!=(i+1))//determina el número que sea igual y que la posición sea igual
+		if(numeroIngresado==numero[i] && posicion!=(i+1))//determina el nÃºmero que sea igual y que la posiciÃ³n sea igual
 		{
 			devuelve=1;
 			break;
@@ -28,7 +28,7 @@ struct Usuario
 
 int main()
 {
-	//añadir los carácteres especiales 
+	//aÃ±adir los carÃ¡cteres especiales 
 	setlocale(LC_ALL, "");
 	//variables
 	char opcion;
@@ -51,13 +51,13 @@ int main()
 			while(opcion3 = 2){
 				system("cls");
 				cout<<" \n\n INSTRUCCIONES: \n\n"<<endl;
-			cout<<" En cada intento, el jugador dice 4 dígitos (no repetidos)\n"<<endl;
-			cout<<" y el programa le da pistas de cuántos aciertos tuvo, sin\n"<<endl;
+			cout<<" En cada intento, el jugador dice 4 dÃ­gitos (no repetidos)\n"<<endl;
+			cout<<" y el programa le da pistas de cuÃ¡ntos aciertos tuvo, sin\n"<<endl;
 			cout<<" indicarle cuales fueron, de la siguiente forma:\n\n"<<endl;
-			cout<<" Si algún dígito que dice el jugador se encuentra dentro del número\n"<<endl;
-			cout<<" a adivinar, pero no está en la posición correcta, se llama PICA.\n\n"<<endl;
-			cout<<" Si el dígito se encuentra en la posición adecuada, se llama FIJA.\n\n"<<endl;
-			cout<<" Así, las pistas serán la cantidad de PICAS y la cantidad de FIJAS que se tienen.\n\n";
+			cout<<" Si algÃºn dÃ­gito que dice el jugador se encuentra dentro del nÃºmero\n"<<endl;
+			cout<<" a adivinar, pero no estÃ¡ en la posiciÃ³n correcta, se llama PICA.\n\n"<<endl;
+			cout<<" Si el dÃ­gito se encuentra en la posiciÃ³n adecuada, se llama FIJA.\n\n"<<endl;
+			cout<<" AsÃ­, las pistas serÃ¡n la cantidad de PICAS y la cantidad de FIJAS que se tienen.\n\n";
 			cout<<" El juego termina cuando el jugador tiene 4 FIJAS.";
 			cout<<"\n\n\n presiona 3 y enter para continuar...";
 			cin>>opcion4;
@@ -93,7 +93,7 @@ int main()
 							cin>>num;
 							while(num>9999)
 							{
-								cout<<"\n\n Ingresa de nuevo el número, de 4 cifras\n\n";
+								cout<<"\n\n Ingresa de nuevo el nÃºmero, de 4 cifras\n\n";
 								cout<<"\n\n Ingresa el numero:";
 								cout<<"\n ";
 								cin>>num;
@@ -130,7 +130,7 @@ int main()
 							{
 						cout<<"\n\n\n";
 									cout<<"\n\ te rendiste :c ";
-									cout<<"\n\ El número era: ";
+									cout<<"\n\ El nÃºmero era: ";
 									for(int i=1;i<5;i++)
 									{
 										cout<<numero[i];
@@ -139,10 +139,10 @@ int main()
 									termino=1;
 							}
 							else{
-								contadorPicas=contadorPicas + determinarPica(n1, 1, numero);
-								contadorPicas=contadorPicas + determinarPica(n2, 2, numero);
-								contadorPicas=contadorPicas + determinarPica(n3, 3, numero);
-								contadorPicas=contadorPicas + determinarPica(n4, 4, numero);
+								contadorPicas=contadorPicas + determinarPica(n1, 2, numero);
+								contadorPicas=contadorPicas + determinarPica(n2, 3, numero);
+								contadorPicas=contadorPicas + determinarPica(n3, 4, numero);
+								contadorPicas=contadorPicas + determinarPica(n4, 5, numero);
 
 								if(n1==numero[1]){
 									contadorFijas=contadorFijas+1;
@@ -170,7 +170,7 @@ int main()
 									{
 									cout<<"\n\n\n";
 									cout<<"\n\ te rendiste :c ";
-									cout<<"\n\ El número era: ";
+									cout<<"\n\ El nÃºmero era: ";
 									for(int i=1;i<5;i++)
 									{
 										cout<<numero[i];
