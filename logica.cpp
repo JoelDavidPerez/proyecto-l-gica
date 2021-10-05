@@ -82,10 +82,10 @@ int main()
 						numero[i]=numero[j];
 						numero[j]=temp;
 					}
-					for(int i=1;i<5;i++)
+					/*for(int i=1;i<5;i++)
 					{
 						cout<<numero[i];
-					}
+					}*/
 
 					while(termino==0){
 							cout<<"\n\n Ingresa el numero: ";
@@ -162,7 +162,7 @@ int main()
 								cout<<"intentos: "<<intentos<<"\n\n";
 							}
 
-							for(int intentosFor=0;intentosReinicioFor==1;intentosFor++)
+							for(int intentosFor=0;intentosReinicioFor==12;intentosFor++)
 							{
 								cout<<"\n\n\n quieres rendirte? \n\n\n ";
 								cin>>num;
